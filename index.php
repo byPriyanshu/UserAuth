@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 $conn = new mysqli('localhost', 'root', '', 'loginfo');
 if ($conn->connect_error) {
     die('Connection Error!' . $conn->connect_error);
@@ -66,4 +66,4 @@ if ($conn->connect_error) {
         });
     </script>
 </body>
-</html>
+</html> -->
