@@ -7,26 +7,28 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/register.css">
 </head>
-<body class="">
-    <div class="container">
-        <div class="top-section">
-            <h2>Register: </h2>
-        </div>
+<body>
+    <div class="wrapper bg-image">
+        <div class="container bg-gradient">
+            <div class="top-section">
+                <h2>Register: </h2>
+            </div>
 
-        <div class="mid-section">
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email">
-            <label for="pass">Password: </label>
-            <input type="password" name="pass" id="pass">
-            <label for="cpass">Confirm Password: </label>
-            <input type="password" name="cpass" id="cpass">
-            <button type="button">Sign up</button>
-        </div>
+            <div class="mid-section">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+                <label for="pass">Password: </label>
+                <input type="password" name="pass" id="pass">
+                <label for="cpass">Confirm Password: </label>
+                <input type="password" name="cpass" id="cpass">
+                <button type="button">Sign up</button>
+            </div>
 
-        <div class="bottom-section">
-            <p>Already have an account?</p>
-            <span>Log in</span>
-        </div>    
+            <div class="bottom-section">
+                <p>Already have an account?</p>
+                <span>Log in</span>
+            </div>    
+        </div>
     </div>
 </body>
 </html>
