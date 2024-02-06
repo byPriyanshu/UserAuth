@@ -26,7 +26,7 @@
 
             <div class="bottom-section">
                 <p>Already have an account?</p>
-                <span>Log in</span>
+                <a href="login.php">Log in</a>
             </div>    
         </div>
     </div>
