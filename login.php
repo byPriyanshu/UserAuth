@@ -1,4 +1,5 @@
-<!-- <?php
+<?php
+/* 
 $conn = new mysqli('localhost', 'root', '', 'loginfo');
 if ($conn->connect_error) {
     die('Connection Error!' . $conn->connect_error);
@@ -19,7 +20,10 @@ if ($conn->connect_error) {
         }
     }
 }
+*/
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +40,12 @@ if ($conn->connect_error) {
         <input type="text" name="pass" id="pass"><br><br>
         <button type="submit" id="b" name="submit">Submit</button>
     </form>
-    <script>
+    </script>
+</body>
+</html>
+
+
+    <!-- <script>
         $(document).ready(function () {
             $("#f").submit(function () {
                 a = $("#uname");
@@ -63,7 +72,4 @@ if ($conn->connect_error) {
                 }
                 return isValid;
             });
-        });
-    </script>
-</body>
-</html> -->
+        }); -->
