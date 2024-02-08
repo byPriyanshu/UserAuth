@@ -23,27 +23,37 @@ if ($conn->connect_error) {
 */
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Register</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <form id="f" action="" method="post">
-        <label for="uname">Username</label><br>
-        <input type="text" name="uname" id="uname"><br>
-        <label for="pass">Password:</label><br>
-        <input type="text" name="pass" id="pass"><br><br>
-        <button type="submit" id="b" name="submit">Submit</button>
-    </form>
-    </script>
+    <div class="wrapper bg-image">
+        <div class="container bg-gradient">
+            <div class="top-section">
+                <h2>Login: </h2>
+            </div>
+
+            <div class="mid-section">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+                <label for="pass">Password: </label>
+                <input type="password" name="pass" id="pass">
+                <button type="button">Login</button>
+            </div>
+
+            <div class="bottom-section">
+                <p>Don't have an account?</p>
+                <a href="register.php">Register in</a>
+            </div>    
+        </div>
+    </div>
 </body>
 </html>
-
 
     <!-- <script>
         $(document).ready(function () {
