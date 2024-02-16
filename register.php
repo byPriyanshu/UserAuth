@@ -14,6 +14,8 @@
                 <h2>Register: </h2>
             </div>
 
+            <span class="error">&nbsp</span>
+
             <div class="mid-section">
                 <label for="email">Email: </label>
                 <input type="email" name="email" id="email">

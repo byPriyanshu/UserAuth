@@ -72,6 +72,15 @@
     }
 
 }
+
+.error{
+    display: block;
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 label{
     display: block;
     font-family: var(--ff-text);
