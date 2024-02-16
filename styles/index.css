@@ -41,9 +41,6 @@
     z-index: 0;
 }
 .container{
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
     height: 100vh;
     margin: auto;
     min-width: 40rem;
@@ -51,7 +48,13 @@
     z-index: 1;
     position: relative;
     padding: 10em 15em;
-    
+}
+#form{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 3rem;
+
     & .top-section{
         flex-basis: 15%;
     }
@@ -98,6 +101,10 @@ input{
     &:focus{
         background-color: #dadada;
     }
+
+}
+input[class *= "input-error"]{
+    border: 2px solid red;
 }
 button{
     background-color: #10BDC8;
