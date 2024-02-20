@@ -30,58 +30,74 @@ if ($conn->connect_error) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrapper bg-image">
         <div class="container bg-gradient">
-            <div class="top-section">
-                <h2>Login: </h2>
-            </div>
+            <form action="" id="form">
+                <div class="top-section">
+                    <h2>Login: </h2>
+                </div>
 
-            <span class="error">&nbsp</span>
+                <span class="error">&nbsp</span>
 
-            <div class="mid-section">
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email">
-                <label for="pass">Password: </label>
-                <input type="password" name="pass" id="pass">
-                <button type="button">Login</button>
-            </div>
+                <div class="mid-section">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                    <label for="pass">Password: </label>
+                    <input type="password" name="pass" id="pass">
+                    <button type="submit">Login</button>
+                </div>
 
-            <div class="bottom-section">
-                <p>Don't have an account?</p>
-                <a href="register.php">Register in</a>
-            </div>    
+                <div class="bottom-section">
+                    <p>Don't have an account?</p>
+                    <a href="register.php">Register in</a>
+                </div>    
+            </form>
         </div>
     </div>
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+        $("#form").submit(function () {
+            email = $("#email");
+            password = $("#pass");
+            error = $(".error");
+            isValid = true;
 
-    <!-- <script>
-        $(document).ready(function () {
-            $("#f").submit(function () {
-                a = $("#uname");
-                b = $("#pass");
-                c = $("#b");
-                isValid = true;
-
-                $(".error").remove();
-                if (a.val() === '') {
-                    a.after("<span class='error'>Please enter username</span>");
+            if (email.val() === '') {
+                if (password.val() === '') {
+                    error.text("Email and Password are empty!");
+                    email.addClass("input-error");
+                    password.addClass("input-error");
+                }
+                else{
+                    error.text("Email is empty!");
+                    email.addClass("input-error");
+                }
+                return false; //To fix the bug of Above conditions being skipped by below
+            }
+            if (password.val() === '') {
+                email.removeClass("input-error");
+                error.text("Password is empty!");
+                password.addClass("input-error");
+                isValid = false;
+            }
+            if (isValid) {
+                email.removeClass("input-error");
+                if (password.val().length < 8) {
+                    error.text("Password length must be greater than 7!")
+                    password.addClass("input-error");
                     isValid = false;
                 }
-                if (b.val() === '') {
-                    b.after("<span class='error'>Please enter password</span>");
-                    isValid = false;
+                else {
+                    password.removeClass("input-error");
+                    // $("#form")[0].reset(); // Commented out to keep values for testing
                 }
-                if (isValid) {
-                    if (b.val().length < 8) {
-                        b.after("<span class='error'>Password must be at least 8 characters long</span>");
-                        isValid = false;
-                    } else {
-                        // $("#f")[0].reset(); // Commented out to keep values for testing
-                    }
-                }
-                return isValid;
-            });
-        }); -->
+            }
+            return isValid;
+        });
+    });
+</script>
