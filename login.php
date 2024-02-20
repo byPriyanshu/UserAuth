@@ -1,26 +1,24 @@
-<?php
-/* 
-$conn = new mysqli('localhost', 'root', '', 'loginfo');
-if ($conn->connect_error) {
-    die('Connection Error!' . $conn->connect_error);
-} else {
-    if (isset($_POST["submit"])) {
-        $u = $_POST['uname'];
-        $p = $_POST['pass'];
+<?php 
+// $conn = new mysqli('localhost', 'root', '', 'loginfo');
+// if ($conn->connect_error) {
+//     die('Connection Error!' . $conn->connect_error);
+// } else {
+//     if (isset($_POST["submit"])) {
+//         $u = $_POST['uname'];
+//         $p = $_POST['pass'];
 
-        $sql = "SELECT * FROM your_table_name WHERE username = '$u' AND password = '$p'";
-        $result = $conn->query($sql);
+//         $sql = "SELECT * FROM your_table_name WHERE username = '$u' AND password = '$p'";
+//         $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            // Username and password match, redirect to another page
-            header("Location: dashboard.html");
-            exit();
-        } else {
-            echo "Invalid username or password.";
-        }
-    }
-}
-*/
+//         if ($result->num_rows > 0) {
+//             // Username and password match, redirect to another page
+//             header("Location: dashboard.html");
+//             exit();
+//         } else {
+//             echo "Invalid username or password.";
+//         }
+//     }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +33,7 @@ if ($conn->connect_error) {
 <body>
     <div class="wrapper bg-image">
         <div class="container bg-gradient">
-            <form action="" id="form">
+            <form action="" method="POST" id="form">
                 <div class="top-section">
                     <h2>Login: </h2>
                 </div>
