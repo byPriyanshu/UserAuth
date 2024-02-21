@@ -1,24 +1,19 @@
 <?php 
-// $conn = new mysqli('localhost', 'root', '', 'loginfo');
-// if ($conn->connect_error) {
-//     die('Connection Error!' . $conn->connect_error);
-// } else {
-//     if (isset($_POST["submit"])) {
-//         $u = $_POST['uname'];
-//         $p = $_POST['pass'];
-
-//         $sql = "SELECT * FROM your_table_name WHERE username = '$u' AND password = '$p'";
-//         $result = $conn->query($sql);
-
-//         if ($result->num_rows > 0) {
-//             // Username and password match, redirect to another page
-//             header("Location: dashboard.html");
-//             exit();
-//         } else {
-//             echo "Invalid username or password.";
-//         }
-//     }
-// }
+    $conn = new mysqli("localhost", "root", "", "user-database");
+    if (isset($_POST["submit"])) {
+        $email = $_POST["email"];    
+        $pass = $_POST["pass"];
+        $sql = "SELECT * FROM `users-list` WHERE Email = '$email' AND Password = '$pass'";
+        $res = $conn -> query($sql);
+        if ($res -> num_rows == 1) {
+            // Username and password match, redirect to another page
+            header("Location: ");
+            exit();
+        } 
+        else {
+            
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +40,7 @@
                     <input type="email" name="email" id="email">
                     <label for="pass">Password: </label>
                     <input type="password" name="pass" id="pass">
-                    <button type="submit">Login</button>
+                    <button type="submit" name="submit">Login</button>
                 </div>
 
                 <div class="bottom-section">
