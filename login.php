@@ -11,7 +11,7 @@
             exit();
         } 
         else {
-            
+            $error_message = "Invalid email or password.";
         }
     }
 ?>
@@ -32,9 +32,9 @@
                 <div class="top-section">
                     <h2>Login: </h2>
                 </div>
-
-                <span class="error">&nbsp</span>
-
+                
+                <span class="error"><?php echo isset($error_message) ? $error_message : ""; ?>&nbsp</span>       
+                
                 <div class="mid-section">
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email">
