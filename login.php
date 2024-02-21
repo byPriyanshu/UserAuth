@@ -1,26 +1,19 @@
-<?php
-/* 
-$conn = new mysqli('localhost', 'root', '', 'loginfo');
-if ($conn->connect_error) {
-    die('Connection Error!' . $conn->connect_error);
-} else {
+<?php 
+    $conn = new mysqli("localhost", "root", "", "user-database");
     if (isset($_POST["submit"])) {
-        $u = $_POST['uname'];
-        $p = $_POST['pass'];
-
-        $sql = "SELECT * FROM your_table_name WHERE username = '$u' AND password = '$p'";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
+        $email = $_POST["email"];    
+        $pass = $_POST["pass"];
+        $sql = "SELECT * FROM `users-list` WHERE Email = '$email' AND Password = '$pass'";
+        $res = $conn -> query($sql);
+        if ($res -> num_rows == 1) {
             // Username and password match, redirect to another page
-            header("Location: dashboard.html");
+            header("Location: ");
             exit();
-        } else {
-            echo "Invalid username or password.";
+        } 
+        else {
+            $error_message = "Invalid email or password.";
         }
     }
-}
-*/
 ?>
 
 <!DOCTYPE html>
@@ -35,19 +28,19 @@ if ($conn->connect_error) {
 <body>
     <div class="wrapper bg-image">
         <div class="container bg-gradient">
-            <form action="" id="form">
+            <form action="" method="POST" id="form">
                 <div class="top-section">
                     <h2>Login: </h2>
                 </div>
-
-                <span class="error">&nbsp</span>
+                
+                <span class="error"><?php echo isset($error_message) ? $error_message : ""; ?>&nbsp</span>       
 
                 <div class="mid-section">
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email">
                     <label for="pass">Password: </label>
                     <input type="password" name="pass" id="pass">
-                    <button type="submit">Login</button>
+                    <button type="submit" name="submit">Login</button>
                 </div>
 
                 <div class="bottom-section">

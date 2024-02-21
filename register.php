@@ -1,3 +1,16 @@
+<?php
+    $conn = new mysqli("localhost", "root", "", "user-database");
+    if (isset($_POST["submit"])) {
+        $email = $_POST["email"];        
+        $pass = $_POST["pass"];
+        $uname = substr($email, 0, strpos($email, "@"));
+        $sql = "INSERT INTO `users-list` (Email, Password, Username) VALUES ('$email', '$pass', '$uname')";
+        if($conn -> query($sql)){
+            echo ("<script>alert('Data inserted sucessfuly! This page is going to reload!');</script>");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +23,7 @@
 <body>
     <div class="wrapper bg-image">
         <div class="container bg-gradient">
-            <form action="" id="form">
+            <form action="" method="POST" id="form">
                 <div class="top-section">
                     <h2>Register: </h2>
                 </div>
@@ -24,7 +37,7 @@
                     <input type="password" name="pass" id="pass">
                     <label for="cpass">Confirm Password: </label>
                     <input type="password" name="cpass" id="cpass">
-                    <button type="submit">Sign up</button>
+                    <button type="submit" name="submit">Sign up</button>
                 </div>
     
                 <div class="bottom-section">
@@ -39,11 +52,11 @@
 <script>
     $(document).ready(function () {
         $("#form").submit(function () {
-            email = $("#email");
-            password = $("#pass");
-            cpassword = $("#cpass");
-            error = $(".error");
-            isValid = true;
+            let email = $("#email");
+            let password = $("#pass");
+            let cpassword = $("#cpass");
+            let error = $(".error");
+            let isValid = true;
 
             if (email.val() === '') {
                 if (password.val() === '') {
