@@ -28,33 +28,19 @@
 <body>
     <div class="wrapper bg-image">
         <div class="container bg-gradient">
-<<<<<<< HEAD
-            <form action="" id="form">
-                <div class="top-section">
-                    <h2>Login: </h2>
-                </div>
-
-                <span class="error">&nbsp</span>
-
-=======
             <form action="" method="POST" id="form">
                 <div class="top-section">
                     <h2>Login: </h2>
                 </div>
                 
                 <span class="error"><?php echo isset($error_message) ? $error_message : ""; ?>&nbsp</span>       
-                
->>>>>>> php
+
                 <div class="mid-section">
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email">
                     <label for="pass">Password: </label>
                     <input type="password" name="pass" id="pass">
-<<<<<<< HEAD
-                    <button type="submit">Login</button>
-=======
                     <button type="submit" name="submit">Login</button>
->>>>>>> php
                 </div>
 
                 <div class="bottom-section">
