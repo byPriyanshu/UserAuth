@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
     $conn = new mysqli("localhost", "root", "", "user-database");
     if (isset($_POST["submit"])) {
@@ -13,7 +11,6 @@
     }
 ?>
 
->>>>>>> php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +23,7 @@
 <body>
     <div class="wrapper bg-image">
         <div class="container bg-gradient">
-<<<<<<< HEAD
-            <form action="" id="form">
-=======
             <form action="" method="POST" id="form">
->>>>>>> php
                 <div class="top-section">
                     <h2>Register: </h2>
                 </div>
@@ -44,11 +37,7 @@
                     <input type="password" name="pass" id="pass">
                     <label for="cpass">Confirm Password: </label>
                     <input type="password" name="cpass" id="cpass">
-<<<<<<< HEAD
-                    <button type="submit">Sign up</button>
-=======
                     <button type="submit" name="submit">Sign up</button>
->>>>>>> php
                 </div>
     
                 <div class="bottom-section">
@@ -63,19 +52,11 @@
 <script>
     $(document).ready(function () {
         $("#form").submit(function () {
-<<<<<<< HEAD
-            email = $("#email");
-            password = $("#pass");
-            cpassword = $("#cpass");
-            error = $(".error");
-            isValid = true;
-=======
             let email = $("#email");
             let password = $("#pass");
             let cpassword = $("#cpass");
             let error = $(".error");
             let isValid = true;
->>>>>>> php
 
             if (email.val() === '') {
                 if (password.val() === '') {
@@ -119,7 +100,3 @@
         });
     });
 </script>
-<<<<<<< HEAD
-=======
-
->>>>>>> php
