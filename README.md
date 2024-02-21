@@ -7,4 +7,4 @@ A college project which requires usage of PHP and mySQL to create a simple login
 ![Login](/Assets/Design/login.png)
 
 **Registeration Page**
-![Register](/Assets/Design/login.png)
+![Register](/Assets/Design/register.png)
