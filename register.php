@@ -1,10 +1,10 @@
 <?php
     $conn = new mysqli("localhost", "root", "", "user-database");
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $email = $_POST["email"];
+    if (isset($_POST["submit"])) {
+        $email = $_POST["email"];        
         $pass = $_POST["pass"];
-        $uname = substr($email, 0, strpos("@"));
-        $sql = "INSERT INTO `users-list` (email, pass, uname) VALUES ('$email', '$pass', '$uname')";
+        $uname = substr($email, 0, strpos($email, "@"));
+        $sql = "INSERT INTO `users-list` (Email, Password, Username) VALUES ('$email', '$pass', '$uname')";
         if($conn -> query($sql)){
             echo ("<script>alert('Data inserted sucessfuly! This page is going to reload!');</script>");
         }
