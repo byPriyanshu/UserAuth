@@ -33,7 +33,7 @@
                     <h2>Login: </h2>
                 </div>
                 
-                <span class="error"><?php echo isset($error_message) ? $error_message : ""; ?>&nbsp</span>       
+                <span class="error"><?php echo isset($error_message) ? $error_message : "&nbsp"; ?></span>       
 
                 <div class="mid-section">
                     <label for="email">Email: </label>
