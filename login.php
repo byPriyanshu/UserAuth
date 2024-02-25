@@ -7,7 +7,7 @@
         $res = $conn -> query($sql);
         if ($res -> num_rows == 1) {
             // Username and password match, redirect to another page
-            header("Location: http://localhost/Homepage/index.html");
+            header("Location: http://localhost/UserAuth/Homepage/");
             exit();
         } 
         else {
