@@ -78,12 +78,6 @@
                 password.addClass("input-error");
                 isValid = false;
             }
-            else if{
-                isValid = false;
-                error.text("Invalid email or password!");
-                email.addClass("input-error");
-                password.addClass("input-error");
-            }
             return isValid;
         });
     });
