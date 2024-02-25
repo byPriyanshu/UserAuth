@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari&display=swap'); /*Manjari*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap'); /*Font I used in facebook site*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap'); /*Merriweather*/
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap'); /*Lalezar*/
+
+/* Add box-sizing: border box to input and text area */
+/*Make space-beetween more good looking*/
+html, body{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden; /*Later Remove this*/
+}
+table{
+    height: 100%;
+    width: 100%; 
+    border-collapse: collapse; /*This was the one line solution I needed to fix the problem that bugged me for 30minutes*/
+}
+td{
+    height: 100%;
+    width: 100%;
+}
+.bg{
+    width: 60%;
+    background: url('Images/CCRC\ wallpaper.jpg'), rgba(0, 0, 0, 0.60);
+    background-blend-mode: darken;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+img{
+    float: right;
+    height: 630px;
+    margin-right: 15px;
+}
+.forms{
+    width: 100%;
+    height: 100%; /*Change to 99.7%*/
+    background-color: #FDE8DD;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    width: 83%;
+    padding: 0px 20px;
+}
+h2{
+    margin: 10px 0px 35px 0px;
+    width: 100%;
+    font-family: 'Manjari';
+    color: red;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+label{
+    margin-bottom: 10px;
+    font-family: 'Merriweather';
+    font-weight: 450;
+    display: inline-block;
+}
+label span{
+    color: red;
+}
+input{
+    border: 1px solid black;
+    border-radius: 0px;
+    height: 22px;
+    /* width: 435px; */
+    width: 96%;
+    padding: 3px 7px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-family: 'yu-gothic-pr6n', sans-serif;
+}
+input:focus{
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+input::placeholder{
+    font-size: 14px;
+    font-family: 'yu-gothic-pr6n', sans-serif;
+}
+.double{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.double input{
+    width: 190px;
+}
+.i1{
+    margin-right: 20px;
+}
+textarea{
+    color: black;
+    font-family: 'yu-gothic-pr6n', sans-serif;
+    max-height: 150px;
+    min-height: 40px;
+    max-width: 96%;
+    min-width: 96%;
+    padding: 3px 7px;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+.button{
+    width: 95px;
+    border: none;
+    height: 34px;
+    font-size: 18px;
+    font-family: 'yu-gothic-pr6n', sans-serif;
+    color: white;
+    cursor: pointer;
+}
+#reset{
+    background-color: #A7A19E;
+}
+#submit{
+    background-color: #FF6363;
+}

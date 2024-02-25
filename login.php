@@ -7,7 +7,7 @@
         $res = $conn -> query($sql);
         if ($res -> num_rows == 1) {
             // Username and password match, redirect to another page
-            header("Location: ");
+            header("Location: http://localhost/Homepage/index.html");
             exit();
         } 
         else {
@@ -78,7 +78,7 @@
                 password.addClass("input-error");
                 isValid = false;
             }
-            else{
+            else if{
                 isValid = false;
                 error.text("Invalid email or password!");
                 email.addClass("input-error");
