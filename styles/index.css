@@ -11,7 +11,7 @@
 
 /* Utility Classes */
 .bg-image{
-    background: url('/Assets/Images/background.png');
+    background: url('../Assets/Images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;

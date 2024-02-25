@@ -7,7 +7,7 @@
         $res = $conn -> query($sql);
         if ($res -> num_rows == 1) {
             // Username and password match, redirect to another page
-            header("Location: ");
+            header("Location: http://localhost/UserAuth/Homepage/");
             exit();
         } 
         else {
@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -33,7 +33,7 @@
                     <h2>Login: </h2>
                 </div>
                 
-                <span class="error"><?php echo isset($error_message) ? $error_message : ""; ?>&nbsp</span>       
+                <span class="error"><?php echo isset($error_message) ? $error_message : "&nbsp"; ?></span>       
 
                 <div class="mid-section">
                     <label for="email">Email: </label>
@@ -72,23 +72,11 @@
                 }
                 return false; //To fix the bug of Above conditions being skipped by below
             }
-            if (password.val() === '') {
+            else if (password.val() === '') {
                 email.removeClass("input-error");
                 error.text("Password is empty!");
                 password.addClass("input-error");
                 isValid = false;
-            }
-            if (isValid) {
-                email.removeClass("input-error");
-                if (password.val().length < 8) {
-                    error.text("Password length must be greater than 7!")
-                    password.addClass("input-error");
-                    isValid = false;
-                }
-                else {
-                    password.removeClass("input-error");
-                    // $("#form")[0].reset(); // Commented out to keep values for testing
-                }
             }
             return isValid;
         });

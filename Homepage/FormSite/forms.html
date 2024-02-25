@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCRC Forms</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+      <table>
+        <thead>
+         <tr>
+            <td class="bg">
+                <img src="Images/Vector.png" alt="Form Title">
+            </td>
+            <td class="forms">
+                <h2>CCRC ADMISSION FORM</h2>
+                <form action="forms.html" method="POST">
+                    <label for="fname">Your Name<span>*</span></label>
+                    <div class="double">
+                        <input type="text" name="fname" id="fname" class="double i1" placeholder="First Name" required>
+                        <input type="text" name="lname" id="lname" class="double i2" placeholder="Last Name" required>
+                    </div>
+                    
+                    <label for="email">Your Email<span>*</span></label>
+                    <input type="email" name="email" id="email" placeholder="Eg- abc@gmail.com" required>
+                    
+                    <label for="unumber">Phone Numbers<span>*</span></label>
+                    <div class="double">
+                        <input type="tel" name="unumber" id="unumber" class="double i1" placeholder="Your Number" required>
+                        <input type="tel" name="pnumber" id="pnumber" class="double i2" placeholder="Guardian Number" required>
+                    </div>
+
+                    <label for="taddress">Your Address<span>*</span></label>
+                    <div class="double">
+                        <input type="text" name="padress" id="taddress" class="double i1" placeholder="Temporary Address" required>
+                        <input type="text" name="tadress" id="paddress" class="double i2" placeholder="Permanent Address" required>
+                    </div>
+                    
+                    <label for="comment">Explain why you chose this college<span>*</span></label>
+                    <textarea name="comment" id="comment" cols="40" rows="6">Write your comment here...</textarea>
+
+                    <div class="buttons">
+                        <input class="button" id="reset" type="reset" value="Reset">
+                        <input class="button" id="submit" type="submit" value="Submit">
+                    </div>
+                
+                </form>
+            </td>
+        </tr>
+    </thead>
+    </table>
+</body>
+</html>
