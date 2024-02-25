@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -72,23 +72,17 @@
                 }
                 return false; //To fix the bug of Above conditions being skipped by below
             }
-            if (password.val() === '') {
+            else if (password.val() === '') {
                 email.removeClass("input-error");
                 error.text("Password is empty!");
                 password.addClass("input-error");
                 isValid = false;
             }
-            if (isValid) {
-                email.removeClass("input-error");
-                if (password.val().length < 8) {
-                    error.text("Password length must be greater than 7!")
-                    password.addClass("input-error");
-                    isValid = false;
-                }
-                else {
-                    password.removeClass("input-error");
-                    // $("#form")[0].reset(); // Commented out to keep values for testing
-                }
+            else{
+                isValid = false;
+                error.text("Invalid email or password!");
+                email.addClass("input-error");
+                password.addClass("input-error");
             }
             return isValid;
         });

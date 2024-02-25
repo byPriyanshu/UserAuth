@@ -70,13 +70,13 @@
                 }
                 return false; //To fix the bug of Above conditions being skipped by below
             }
-            if (password.val() === '') {
+            else if (password.val() === '') {
                 email.removeClass("input-error");
                 error.text("Password is empty!");
                 password.addClass("input-error");
                 isValid = false;
             }
-            if (isValid) {
+            else if (isValid) {
                 email.removeClass("input-error");
                 if (password.val().length < 8) {
                     error.text("Password length must be greater than 7!")
@@ -92,7 +92,6 @@
                     else{
                         password.removeClass("input-error");
                         cpassword.removeClass("input-error");
-                        // $("#form")[0].reset(); // Commented out to keep values for testing
                     }
                 }
             }
